@@ -26,6 +26,8 @@ namespace SpreadCheetahSamples
                 new StyledCell("Grade", headerStyleId)
             };
 
+            await spreadsheet.AddRowAsync(headerRow);
+
             // `DataCell` can perform even better for rows that only contains a value with no styling.
             // If all rows have the same number of columns, reusing an array/list can also avoid some memory allocations.
             var row = new DataCell[headerRow.Length];
