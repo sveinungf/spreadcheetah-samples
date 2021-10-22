@@ -9,7 +9,8 @@ namespace SpreadCheetahSamples
     {
         public static async Task Sample()
         {
-            // Write to file by creating a file stream.
+            // SpreadCheetah can write to any writeable stream.
+            // To write to a file, start by creating a file stream.
             using (var stream = File.Create("write-to-file.xlsx"))
             using (var spreadsheet = await Spreadsheet.CreateNewAsync(stream))
             {
