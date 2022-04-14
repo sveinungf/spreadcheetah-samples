@@ -49,8 +49,11 @@ public static class StylingBasics
                 new Cell("The Nile", answerStyleId)
             };
 
-            await spreadsheet.AddRowAsync(row1);
-            await spreadsheet.AddRowAsync(row2);
+            // Optionally set row height.
+            var rowOptions = new RowOptions { Height = 25 };
+
+            await spreadsheet.AddRowAsync(row1, rowOptions);
+            await spreadsheet.AddRowAsync(row2, rowOptions);
 
             await spreadsheet.FinishAsync();
         }
