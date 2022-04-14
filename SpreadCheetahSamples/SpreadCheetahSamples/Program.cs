@@ -1,5 +1,4 @@
 ﻿using SpreadCheetahSamples;
-using System;
 
 await DisposeAsync.Sample();
 await FormulaBasics.Sample();
