@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SpreadCheetah" Version="1.4.0" />
+    <PackageReference Include="SpreadCheetah" Version="1.5.0" />
   </ItemGroup>
 
 </Project>
