@@ -1,5 +1,6 @@
 ﻿using SpreadCheetahSamples;
 
+await DataValidations.Sample();
 await DisposeAsync.Sample();
 await FormulaBasics.Sample();
 await PerformanceTips.Sample();
