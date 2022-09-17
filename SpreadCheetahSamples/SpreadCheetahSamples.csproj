@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SpreadCheetah" Version="1.5.0" />
+    <PackageReference Include="SpreadCheetah" Version="1.6.0" />
   </ItemGroup>
 
 </Project>
