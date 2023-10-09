@@ -41,6 +41,15 @@ public static class DateTimeAndFormatting
         var cellA4 = new Cell(dateTime);
         await spreadsheet.AddRowAsync(new[] { cellA4 });
 
+        // Example of conditional coloring - values that are less or equal to 100 will be red, and all others (greater than 100) will be blue
+        // Note: Only the following colors can be used: [Black] [Blue] [Cyan] [Green] [Magenta] [Red] [White] [Yellow]
+        var style4 = new Style { Format = NumberFormat.Custom("[Red][<=100];[Blue][>100]") };
+        var style4Id = spreadsheet.AddStyle(style4);
+        var cellA5 = new Cell(99, style4Id);
+        await spreadsheet.AddRowAsync(new[] { cellA5 });
+        var cellA6 = new Cell(101, style4Id);
+        await spreadsheet.AddRowAsync(new[] { cellA6 });
+
         await spreadsheet.FinishAsync();
     }
 }
