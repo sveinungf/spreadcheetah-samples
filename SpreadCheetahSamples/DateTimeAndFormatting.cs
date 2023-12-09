@@ -1,5 +1,6 @@
 ﻿using SpreadCheetah;
 using SpreadCheetah.Styling;
+using SpreadCheetah.Worksheets;
 
 namespace SpreadCheetahSamples;
 
@@ -10,7 +11,9 @@ public static class DateTimeAndFormatting
         await using var stream = File.Create("datetime-and-formatting.xlsx");
         await using var spreadsheet = await Spreadsheet.CreateNewAsync(stream);
 
-        await spreadsheet.StartWorksheetAsync("Sheet 1");
+        var options = new WorksheetOptions();
+        options.Column(1).Width = 20;
+        await spreadsheet.StartWorksheetAsync("Sheet 1", options);
 
         var dateTime = new DateTime(2022, 10, 18, 11, 26, 34);
 
