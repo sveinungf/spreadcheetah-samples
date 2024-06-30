@@ -22,6 +22,11 @@ public class Person
     [ColumnOrder(3)]
     public string? MiddleName { get; set; }
 
+    [ColumnWidth(25)]
+    [CellValueTruncate(20)]
+    public string? AdditionalInfo { get; set; }
+
+    [ColumnWidth(5)]
     public int Age { get; set; }
 }
 
@@ -41,7 +46,9 @@ public static class SourceGenerator
         await using var stream = File.Create("source-generator.xlsx");
         await using var spreadsheet = await Spreadsheet.CreateNewAsync(stream);
 
-        await spreadsheet.StartWorksheetAsync("Sheet 1");
+        // Pass the context type to 'StartWorksheetAsync' to set the column widths from ColumnWidth attributes.
+        // Alternatively, create a 'WorksheetOptions' instance from 'PersonRowContext.Default.Person.CreateWorksheetOptions()'.
+        await spreadsheet.StartWorksheetAsync("Sheet 1", PersonRowContext.Default.Person);
 
         var headerStyle = new Style { Font = { Bold = true } };
         var headerStyleId = spreadsheet.AddStyle(headerStyle);
@@ -56,7 +63,8 @@ public static class SourceGenerator
             FirstName = "Ola",
             MiddleName = null,
             LastName = "Nordmann",
-            Age = 25
+            Age = 25,
+            AdditionalInfo = "This person doesn't exist and is just an example"
         };
 
         // Call the 'AddAsRowAsync' method with the object and the context type created by the source generator.
