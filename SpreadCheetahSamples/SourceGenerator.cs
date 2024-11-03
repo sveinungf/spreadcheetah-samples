@@ -11,6 +11,9 @@ namespace SpreadCheetahSamples;
 // The order can also be customized by using the ColumnOrder attribute.
 public class Person
 {
+    [ColumnIgnore]
+    public string? Id { get; set; }
+
     public string? Title { get; set; }
 
     [ColumnHeader("First name")]
