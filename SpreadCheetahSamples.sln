@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadCheetahSamples", "SpreadCheetahSamples\SpreadCheetahSamples.csproj", "{AC54A7A1-9E2C-443A-9D58-72A31EF5067C}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SpreadCheetahFSharpSamples", "SpreadCheetahFSharpSamples\SpreadCheetahFSharpSamples.fsproj", "{864AB190-55E5-419C-8DFC-B4890EA6FBDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{8D782867-E178-4C3F-BF29-53556099CB47}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,10 @@ Global
 		{AC54A7A1-9E2C-443A-9D58-72A31EF5067C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC54A7A1-9E2C-443A-9D58-72A31EF5067C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC54A7A1-9E2C-443A-9D58-72A31EF5067C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{864AB190-55E5-419C-8DFC-B4890EA6FBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{864AB190-55E5-419C-8DFC-B4890EA6FBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{864AB190-55E5-419C-8DFC-B4890EA6FBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{864AB190-55E5-419C-8DFC-B4890EA6FBDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

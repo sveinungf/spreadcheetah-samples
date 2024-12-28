@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="DataValidations.fs" />
+        <Compile Include="DateTimeAndFormatting.fs" />
+        <Compile Include="DisposeAsync.fs" />
+        <Compile Include="FormulaBasics.fs" />
+        <Compile Include="PerformanceTips.fs" />
+        <Compile Include="StylingBasics.fs" />
+        <Compile Include="WriteToFile.fs" />
+        <Compile Include="Program.fs"/>
+    </ItemGroup>
+
+</Project>
