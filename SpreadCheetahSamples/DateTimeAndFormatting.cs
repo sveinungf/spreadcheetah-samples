@@ -22,14 +22,14 @@ public static class DateTimeAndFormatting
         var style1 = new Style { Format = NumberFormat.Custom("DD.MM.YYYY") };
         var style1Id = spreadsheet.AddStyle(style1);
         var cellA1 = new Cell(dateTime, style1Id);
-        await spreadsheet.AddRowAsync(new[] { cellA1 });
+        await spreadsheet.AddRowAsync([cellA1]);
 
         // Note that some characters have special meaning in the format codes. An example is the 'h' character, which signifies the hour.
         // Text can be escaped by enclosing them in double quotation marks. Here is an example of displaying the date as "18th":
         var style2 = new Style { Format = NumberFormat.Custom("D\"th\"") };
         var style2Id = spreadsheet.AddStyle(style2);
         var cellA2 = new Cell(dateTime, style2Id);
-        await spreadsheet.AddRowAsync(new[] { cellA2 });
+        await spreadsheet.AddRowAsync([cellA2]);
 
         // Also note that how some parts are displayed can depend on the regional/language setting of Excel.
         // This example will be shown as "October" in Excel when English (US) is the chosen language.
@@ -37,12 +37,12 @@ public static class DateTimeAndFormatting
         var style3 = new Style { Format = NumberFormat.Custom("MMMM") };
         var style3Id = spreadsheet.AddStyle(style3);
         var cellA3 = new Cell(dateTime, style3Id);
-        await spreadsheet.AddRowAsync(new[] { cellA3 });
+        await spreadsheet.AddRowAsync([cellA3]);
 
         // When no style or number format has been specified, the DateTime will by default be displayed as "2022-10-18 11:26:34".
         // The default can be overriden by setting DefaultDateTimeNumberFormat on SpreadCheetahOptions when creating the spreadsheet.
         var cellA4 = new Cell(dateTime);
-        await spreadsheet.AddRowAsync(new[] { cellA4 });
+        await spreadsheet.AddRowAsync([cellA4]);
 
         await spreadsheet.FinishAsync();
     }

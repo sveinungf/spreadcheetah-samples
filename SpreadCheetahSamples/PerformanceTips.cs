@@ -43,12 +43,12 @@ public static class PerformanceTips
         await spreadsheet.FinishAsync();
     }
 
-    private static (string Name, int Age, string Grade)[] GetStudents() => new[]
-    {
+    private static (string Name, int Age, string Grade)[] GetStudents() =>
+    [
         ("Jakob", 22, "C"),
         ("Emma", 20, "B"),
         ("William", 23, "A"),
         ("Sara", 22, "A"),
         ("Lucas", 21, "D")
-    };
+    ];
 }

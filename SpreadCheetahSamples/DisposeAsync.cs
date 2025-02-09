@@ -12,11 +12,11 @@ public static class DisposeAsync
         // SpreadCheetah also similarly implements DisposeAsync.
         await using var spreadsheet = await Spreadsheet.CreateNewAsync(stream);
 
-        var row = new[]
-        {
-            new Cell("Answer to the ultimate question:"),
-            new Cell(42)
-        };
+        Cell[] row =
+        [
+            new("Answer to the ultimate question:"),
+            new(42)
+        ];
 
         await spreadsheet.StartWorksheetAsync("Sheet 1");
         await spreadsheet.AddRowAsync(row);
