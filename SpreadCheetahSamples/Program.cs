@@ -9,6 +9,7 @@ await PerformanceTips.Sample();
 await SourceGenerator.Sample();
 await StylingBasics.Sample();
 await TableBasic.Sample();
+await TableCalculatedColumn.Sample();
 await TableMultiple.Sample();
 await TableTotalRow.Sample();
 await WriteToFile.Sample();
