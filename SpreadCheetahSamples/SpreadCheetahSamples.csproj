@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SpreadCheetah" Version="1.21.0" />
+    <PackageReference Include="SpreadCheetah" Version="1.22.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +24,12 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>HeaderResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\icon-package.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
