@@ -6,6 +6,7 @@ await DateTimeAndFormatting.Sample();
 await DisposeAsync.Sample();
 await EmbeddedImage.Sample();
 await FormulaBasics.Sample();
+await MergingCells.Sample();
 await PerformanceTips.Sample();
 await SourceGenerator.Sample();
 await StylingBasics.Sample();
