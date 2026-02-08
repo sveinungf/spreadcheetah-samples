@@ -8,6 +8,7 @@ await EmbeddedImage.Sample();
 await FormulaBasics.Sample();
 await MergingCells.Sample();
 await PerformanceTips.Sample();
+await RowGrouping.Sample();
 await SourceGenerator.Sample();
 await StylingBasics.Sample();
 await TableBasic.Sample();
