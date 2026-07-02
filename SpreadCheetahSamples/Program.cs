@@ -1,6 +1,8 @@
 ﻿using SpreadCheetahSamples;
+using SpreadCheetahSamples.ConditionalFormatting;
 using SpreadCheetahSamples.Tables;
 
+await ConditionalFormatUniqueValues.Sample();
 await DataValidations.Sample();
 await DateTimeAndFormatting.Sample();
 await DisposeAsync.Sample();

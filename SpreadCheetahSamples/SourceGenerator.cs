@@ -9,6 +9,7 @@ namespace SpreadCheetahSamples;
 // The source generator will pick the properties with public getters.
 // By default, the order of the properties will decide the order of the cell values.
 // The order can also be customized by using the ColumnOrder attribute.
+[DefaultColumnWidth(15)]
 public class Person
 {
     [ColumnIgnore]
