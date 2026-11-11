@@ -8,25 +8,24 @@ public static class WriteToFile
     {
         // SpreadCheetah can write to any writeable stream.
         // To write to a file, start by creating a file stream.
-        using (var stream = File.Create("write-to-file.xlsx"))
-        using (var spreadsheet = await Spreadsheet.CreateNewAsync(stream))
-        {
-            // A spreadsheet must contain at least one worksheet.
-            await spreadsheet.StartWorksheetAsync("Sheet 1");
+        await using var stream = File.Create("write-to-file.xlsx");
+        await using var spreadsheet = await Spreadsheet.CreateNewAsync(stream);
 
-            // Cells are inserted row by row.
-            Cell[] row =
-            [
-                new("Answer to the ultimate question:"),
-                new(42)
-            ];
+        // A spreadsheet must contain at least one worksheet.
+        await spreadsheet.StartWorksheetAsync("Sheet 1");
 
-            // Rows are inserted from top to bottom.
-            await spreadsheet.AddRowAsync(row);
+        // Cells are inserted row by row.
+        List<Cell> row =
+        [
+            new("Answer to the ultimate question:"),
+            new(42)
+        ];
 
-            // Remember to call Finish before disposing.
-            // This is important to properly finalize the XLSX file.
-            await spreadsheet.FinishAsync();
-        }
+        // Rows are inserted from top to bottom.
+        await spreadsheet.AddRowAsync(row);
+
+        // Remember to call Finish before disposing.
+        // This is important to properly finalize the XLSX file.
+        await spreadsheet.FinishAsync();
     }
 }
